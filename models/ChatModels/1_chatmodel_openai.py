@@ -12,6 +12,7 @@ llm.temperature = 0.7
 llm.max_completion_tokens = 10
 
 result = llm.invoke("What is the capital of France?")
+
 print(result)
 print(result.content)
 # Output: The capital of France is Paris.
