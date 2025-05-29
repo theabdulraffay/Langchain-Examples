@@ -5,6 +5,8 @@ load_dotenv()
 
 model = ChatAnthropic(model_name= "claude-3-5-sonnet-20241022")
 
+# https://console.anthropic.com/settings/keys to get api key
+
 result = model.invoke("What is the capital of France?")  # Example usage
 
 #Add ANTHROPIC_API_KEY to your .env file
