@@ -11,7 +11,7 @@ embedding_result = embedding.embed_query(text)  # Single query embedding
 # it will give 384 dimensions of embedding for the text
 
 # this will return a list of floats representing the embedding of the query
-print(str(embedding_result))
+# print(str(embedding_result))
 
 
 
@@ -26,4 +26,4 @@ documents = [
 result = embedding.embed_documents(documents)  # Embedding multiple documents
 
 # this will return a list of lists, where each inner list is the embedding of a document
-print(str(result))
+print(result)
