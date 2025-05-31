@@ -5,7 +5,6 @@ from langchain_core.prompts import PromptTemplate, load_prompt
 
 load_dotenv()
 
-
 llm = ChatGroq(
     model="meta-llama/llama-4-maverick-17b-128e-instruct",
     temperature=0,
@@ -34,15 +33,21 @@ template= load_prompt("paper_summary_template.json") # This will load the prompt
 
 
 # fill the placeholders
-prompt = template.invoke(
+# prompt = template.invoke(
+#         {
+#             "paper_input": paper_input,
+#             "style_input": style_input,
+#             "length_input": length_input
+#         }
+#     )
+
+if st.button("Send"):
+    chain = template | llm
+    result = chain.invoke(
         {
             "paper_input": paper_input,
             "style_input": style_input,
             "length_input": length_input
         }
     )
-
-if st.button("Send"):
-    result = llm.invoke(prompt)
     st.write(result.content)
-    # st.write(paper_input+" " + style_input + " " + length_input)
