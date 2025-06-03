@@ -38,6 +38,7 @@ print(f"Sentiment: {result['sentiment']}")
 
 #Annotated TypeDict
 # Annotated is a way to add metadata to the fields of a TypedDict, which can be useful for documentation or validation purposes. Here we use Annotated to provide additional information about each field in the TypedDict. 
+#  we cannot add data validations to it
 class ReviewWithAnnotation(TypedDict):
     key_themes: Annotated[list[str], "Write down all the kety themes dicussed in the review, should be a list of strings."]
     summary: Annotated[str, "The summary of the review, should be concise and to the point."]
