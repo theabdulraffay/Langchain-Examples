@@ -12,6 +12,9 @@ what if the output is is json (structured -> well defined data format) which is 
 In short (text -> JSON) is structured output 
 
 3 ways to use with_structured_output
-1. Typed Dict -> see 2_with_structured_output_typeddict.py
-2. Pydantic -> see 3_with_structured_output_pydantic.py
-3. JSON 
+    1. Typed Dict -> see 2_with_structured_output_typeddict.py
+        use when dont need validation 
+    2. Pydantic -> see 3_with_structured_output_pydantic.py
+        use when type validation need
+    3. JSON ->  see 4_with_structured_output_json.py
+        use when you want to work outside python ecosystem because it uses json
