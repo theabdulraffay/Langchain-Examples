@@ -13,5 +13,5 @@ In short (text -> JSON) is structured output
 
 3 ways to use with_structured_output
 1. Typed Dict -> see 2_with_structured_output_typeddict.py
-2. Pydantic
+2. Pydantic -> see 3_with_structured_output_pydantic.py
 3. JSON 
