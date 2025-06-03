@@ -1,0 +1,17 @@
+out we get from llm can be transfered to different apis and models
+
+llm give output which is in text form (unstructured)
+
+what if the output is is json (structured -> well defined data format) which is easier to parse and can be integrated easily programatically
+1. Data Extraction
+2. API building
+3. Agents
+
+
+
+In short (text -> JSON) is structured output 
+
+3 ways to use with_structured_output
+1. Typed Dict
+2. Pydantic
+3. JSON 
