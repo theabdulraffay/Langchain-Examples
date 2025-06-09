@@ -7,7 +7,7 @@ load_dotenv()
 
 # template
 chat_template = ChatPromptTemplate([
-    ('system', 'You are a good friend that listen to people queries and provide helpful responses. '),
+    ('system', 'You are a good friend that listen to people queries and provide short helpful responses that donot exceed 100 words.'),
     MessagesPlaceholder(variable_name = "chat_history"),
     # ('human', MessagesPlaceholder(variable_name="chat_history")),
     ('human', '{query}'),
@@ -48,7 +48,7 @@ with open('chat_history.txt') as f:
 model = ChatGroq(
     model="llama-3.1-8b-instant",
     temperature=0,
-    max_tokens=15,
+    max_tokens=100,
 )
 # response = model.invoke(prompt)
 # print(f"Response: {response.content}")
