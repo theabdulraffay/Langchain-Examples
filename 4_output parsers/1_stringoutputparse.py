@@ -49,6 +49,7 @@ template2 = PromptTemplate(
 
 parser = StrOutputParser()
 # this is the entire flow of the code
+# parser will automatically extract result.content from the model response
 chain = template1 |model | parser | template2 | model | parser
 
 # invoke the chain

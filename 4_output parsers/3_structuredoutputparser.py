@@ -4,6 +4,7 @@ from langchain_core.prompts import PromptTemplate
 from langchain.output_parsers import StructuredOutputParser, ResponseSchema
 
 # it does enforce a schema 
+# no data validation can be done using StructuredOutputParser, which is a subclass of OutputParser.
 
 load_dotenv()
 

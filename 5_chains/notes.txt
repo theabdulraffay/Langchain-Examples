@@ -1,0 +1,8 @@
+applications are made up of multiple small steps
+prompt from user -> to LLM -> output
+chain help us create pipelines
+output of 1st step act as input for next
+
+sequential chain
+parallel chain 
+conditional chains

@@ -5,6 +5,8 @@ from langchain_core.output_parsers import PydanticOutputParser
 from pydantic import BaseModel, Field
 from langchain_google_genai import ChatGoogleGenerativeAI
 
+# data validation and schema enforcement using PydanticOutputParser
+
 load_dotenv()
 
 # model = ChatGroq(
