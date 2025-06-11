@@ -1,0 +1,8 @@
+convert raw LLM response into JSON, csv, pydantic models.
+They ensure consistency, validation and ease of use.
+
+4 main output parsers
+1. String output parser
+2. JSON OP 
+3. Structured OP 
+4. Pydantic OP 
