@@ -70,7 +70,7 @@ branch_chain = RunnableBranch(
 
 chain = classifier_chain | branch_chain
 
-result = chain.invoke({'text' : 'This is a terrible phone'})
+result = chain.invoke({'text' : 'This is a beautiful phone'})
 
 print(result)
 chain.get_graph().print_ascii()
