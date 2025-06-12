@@ -1,2 +1,18 @@
 Runnables are unit of work 
 they act like building blocks, where each block has its own function and they can be connected together to form complex structure
+
+
+it is the standardization of using different components, how they seemlessly integrate using Runnables and creat pipeline
+
+1. Task Specific Runnables
+    chaiOpenAi -> its a component and also a runnable to create pipelines
+    PromptTemplate
+    Retreivers
+
+2. Runnable Primitives
+    Building block for structuring workflows and integrating task specific Runnables
+    It help us to create workflows 
+    in 2_standardized_components.py RunnableConnector is a primmitive, it connect task specific runnables 
+    
+     
+      

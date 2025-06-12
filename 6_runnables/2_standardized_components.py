@@ -128,7 +128,7 @@ final_chain  = RunnableConnector(
     ]
 )
 
-result = chain1.invoke({
+result = final_chain.invoke({
     'topic' : 'AI'
 })
 
