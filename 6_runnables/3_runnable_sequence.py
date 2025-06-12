@@ -8,6 +8,14 @@ from langchain.schema.runnable import RunnableSequence
 
 load_dotenv()
 
+model = ChatGroq(
+    model="meta-llama/llama-4-maverick-17b-128e-instruct",
+    temperature=0,
+    max_tokens=None,
+    timeout=None,
+    max_retries=2,
+)
+
 prompt = PromptTemplate(
     template='Write a joke about {joke}',
     input_variables=[
@@ -15,3 +23,22 @@ prompt = PromptTemplate(
     ]
 )
 
+
+prompt2 = PromptTemplate(
+    template='Exxplain the following {joke}',
+    input_variables=[
+        'joke'
+    ]
+)
+
+parser= StrOutputParser()
+
+chain = RunnableSequence(
+    prompt, model, parser, prompt2, model, parser
+)
+
+result = chain.invoke({
+    'joke' : 'AI'
+})
+
+print(result)
