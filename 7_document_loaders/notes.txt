@@ -1,0 +1,22 @@
+We will start RAG based applications
+
+We provide our own data to the model in RAG to fine tune the model according to your usage
+
+Components of RAG:
+1. Document Loaders
+2. Text Splitters
+3. Vector Databases
+4. Retrevers
+
+
+Document Loaders
+Main doc Loaders:
+    Text Loader
+    PDF Loader 
+    WebBase Loader 
+    CSV Loader 
+
+
+What are doc laoder 
+use to load data from various sources (cloud, text, data bases, pdf) then convert it into a standard format 
+
