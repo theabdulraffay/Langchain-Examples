@@ -27,3 +27,6 @@ scikit-learn
 
 langchain-community # Additional Utilities
 pydantic # Data validation and settings management
+
+#To read PDFs using pyPDFLoader
+pypdf
