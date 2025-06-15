@@ -16,7 +16,6 @@ class Student:
     def is_passing(self):
         return self.grade >= 6.0
 
-
 # Example usage
 student1 = Student("Aarav", 20, 8.2)
 print(student1.get_details())
