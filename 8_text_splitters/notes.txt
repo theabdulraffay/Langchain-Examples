@@ -1,0 +1,12 @@
+if you have a large file, you can divide that file into chunks(pages, or paragraphs basis)
+
+over come model limitations, embeddings semantic search and summarization can be done using text Splitters 
+
+it is also used for better parallelization  
+
+
+Types of Text Splitters 
+1. Length based.
+2. Tet Structure based 
+3. Document Str Based 
+4. Semantic meaning based 
