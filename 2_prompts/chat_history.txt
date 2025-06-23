@@ -1,8 +1,4 @@
 User: Hey? I am Abdul Raffay and I am 18 years old I study in comsats in Islamabad Pakistan doing my bachelors in Computer Sciences
 AI: Hi. How can I help you today?
-User: what is my  age
+User: What is my age?
 AI: You're 18 years old.
-User: what careers options i have in my degree
-AI: As a Computer Science graduate from COMSATS, you have various career options:  1. Software Engineer 2. Data Scientist 3. IT Consultant 4. Cyber Security Specialist 5. Artificial Intelligence/Machine Learning Engineer 6. Web Developer 7. Network Administrator 8. Database Administrator 9. IT Project Manager 10. Research and Development roles in tech companies.  These are just a few examples, and your skills can be applied to many other fields as well.
-User: 9
-AI: You're interested in IT Project Management.   In this role, you'll oversee projects from planning to execution, ensuring they're completed on time, within budget, and meet requirements. Your skills in computer science will help you manage technical aspects, while your project management skills will help you lead teams and stakeholders.

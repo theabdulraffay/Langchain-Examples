@@ -37,11 +37,11 @@ chain = template | model | parser
 
 result = chain.invoke({
     'text' : docs[0].page_content,
-    'question' : 'On which product I am getting more discount?'
+    'question' : 'What is the discount price of the laptop, also tell me the model of the laptop'
 })
 
 # print(docs)
-print(docs[0].page_content)
+# print(docs[0].page_content)
 # print(len(docs))
 # soup = BeautifulSoup(docs[0].page_content, "html.parser")
 
@@ -53,4 +53,4 @@ print(docs[0].page_content)
 # with open('response.txt', 'a', encoding='utf-8') as f:
 #     f.write(clean_text)
 
-# print(result)
+print(result)

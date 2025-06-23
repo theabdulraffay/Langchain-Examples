@@ -1,0 +1,25 @@
+in order to find similarity between 2 objects we use vector store 
+it tells which 2 objects are have more similarity score 
+it first convert object into embeddings and compare all the dimesions by calculating cosing similarity 
+
+
+1. Generate embedding vectors 
+2. Store embedding vectors (use vector DB not relational DB)
+3. Intelligent Semantic Search 
+
+All this can be done using vector store 
+Feature of Vector Store 
+1. Storage: of vectors and metadata 
+2. Similarity Search : FInd most similar object/vector 
+3. Indexing: fast similarity Search 
+4. CRUD operations 
+
+
+Vector Store vs Vector Database 
+Store: has both storage and retrivers , FAISS is a vector store 
+database: has distributed architecture, backups, concurrency control, auths, Pinecone, Milvus is a database 
+
+
+Chroma DB: 
+is a vector DB 
+also light weight 
