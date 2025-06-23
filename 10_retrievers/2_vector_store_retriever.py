@@ -18,6 +18,7 @@ documents = [
 # Step 2: Initialize embedding model
 embedding_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2", )
 
+
 # Step 3: Create Chroma vector store in memory
 vectorstore = Chroma.from_documents(
     documents=documents,
