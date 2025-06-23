@@ -1,13 +1,11 @@
 # ? it searches the embedding in a vector store using the query
 
 from langchain_community.vectorstores import Chroma
-from langchain_openai import OpenAIEmbeddings
 from langchain_core.documents import Document
 from langchain_huggingface import HuggingFaceEmbeddings
 import os
 
 os.environ['HF_HOME'] = 'C:\\Agentic AI'
-embedding = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2", )
 
 # Step 1: Your source documents
 documents = [
@@ -18,7 +16,7 @@ documents = [
 ]
 
 # Step 2: Initialize embedding model
-embedding_model = OpenAIEmbeddings()
+embedding_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2", )
 
 # Step 3: Create Chroma vector store in memory
 vectorstore = Chroma.from_documents(
@@ -30,6 +28,11 @@ vectorstore = Chroma.from_documents(
 # Step 4: Convert vectorstore into a retriever
 retriever = vectorstore.as_retriever(search_kwargs={"k": 2})
 
+
 query = "What is Chroma used for?"
 results = retriever.invoke(query)
+another_rsult = vectorstore.similarity_search(query=query, k=2)
 
+for i, doc in enumerate(results):
+    print(f"\n--- Result {i+1} ---")
+    print(doc.page_content)
