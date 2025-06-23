@@ -1,0 +1,4 @@
+Retrivers is a component that fetch document from data source in response to data query (vector store, api)
+
+Wikipedia retrivers
+    it hit on Wikipedia api, and then give the result in form of most relevent article 
