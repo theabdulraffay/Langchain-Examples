@@ -1,0 +1,78 @@
+4 Components of RAG
+
+    1. Doc Loaders
+    2. Text Splitters
+    3. Vector Stores
+    4. Retrievers
+
+why? what? how? flow
+
+Why RAG?
+    LLM store all their data in form of parameters, too access this data/parameters we use prompting.
+
+    1.Now lets say we have private data and want to QA on this
+    2.When we want to ask QA on live data/ recent data
+    3.Hallucination -> Get wrong response from LLM
+
+These problems can be solved using fine tuning
+    Train LLM using domain specific data 
+    To fine tuning we use 
+        supervised fine tuning -> labelled data set (Prompts and desired outputs)
+        Continued pre training 
+        RLHF 
+
+Problem with fine tuning:
+    Expansive to fine tune 
+    Technical expertise 
+
+To overcome this problem we use in-context learning
+where LLM respond based on the given examples that are given along with the prompt aka FewshortPrompting
+(Sending few exmaples as context with the query)
+
+"Language models are few short learners"
+
+RAG make LLM Smarter by giving an extra information
+in RAG prompt = Query + Context 
+
+
+How RAG works?
+RAG = information retrieval + text  generation 
+1. Indexing
+    external knowldge base is created which help to derive "context". Process of creating external knwoedge base is indexing 
+2. retrieval:
+    Search the knowledge base and see which chunk/ segment is most related to the query and fetch that chunk is retrieval 
+3. Augmentation:
+    Process of creating prompt (query+ retrieved context)
+4. generation:
+    Prompt is send to LLM, which used incontextLearning
+
+
+
+
+1. Indexing:
+    Process of preparing external knowledge base 
+    steps:
+    1. Document ingestion:
+        load data in memory from source(google drive aws, database) using DocumentLoaders 
+    2. Text Chunking:
+        The large doc in memory is divided into chunks using TextSplitters 
+    3. Embedding Generation: 
+        Convert each data chunk into vectors 
+    4. Storage in a vector store 
+        This vector store will act as an external knowledge base 
+
+2. Retrieval: 
+    find most revelent piece of info from external souce (which vector is most suitable in according to the query to send to LLM)
+    query is send to a retriever 
+    retriever convert query into embedding vector 
+    this vector is matched with all the vector in the external knowledge base
+    the closed vector are ranked and their text is extracted 
+
+3. Augmentaition 
+    we add query + Most relevent chunk (context -> from retriever) to form a prompt 
+
+4. Generation: 
+    LLM uses its own data and context to generate response 
+    
+
+         
