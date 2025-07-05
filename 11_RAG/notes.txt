@@ -48,7 +48,6 @@ RAG = information retrieval + text  generation
 
 
 
-
 1. Indexing:
     Process of preparing external knowledge base 
     steps:
@@ -72,7 +71,6 @@ RAG = information retrieval + text  generation
     we add query + Most relevent chunk (context -> from retriever) to form a prompt 
 
 4. Generation: 
-    LLM uses its own data and context to generate response 
-    
+    LLM uses its own data and context (fom our external knowledge) to generate response.
 
          
