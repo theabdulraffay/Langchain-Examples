@@ -1,0 +1,15 @@
+Biggest power of llm is reasoning capabality, language capability -> to think and to speak
+
+llm cannot do anything beyound else its like a man who can speak and think but cannot walk can hold stuff
+
+tools are stuff that give hands and legs to llm 
+
+tools are simply function
+
+2 types of tools 
+
+1. Built in tools 
+2. Custom tools
+
+
+Agent can think, decide, and take action based on tools available to acheive goal 
