@@ -1,7 +1,7 @@
 from langchain_core.tools import tool
 
 
-# add type hinting and doc string to the function, also add terhtool decorator
+# add type hinting and doc string to the function, also add the tool decorator
 
 @tool
 def add(a: int, b: int) -> int:

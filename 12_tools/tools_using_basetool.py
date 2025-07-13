@@ -2,7 +2,7 @@ from langchain.tools import BaseTool
 from pydantic import Field, BaseModel
 from typing import Type 
 
-class addInput(BaseModel):
+class AddInput(BaseModel):
     a: int = Field(required = True, description="The first number to add.")
     b: int = Field(required = True, description="The second number to add.")
 
@@ -10,7 +10,7 @@ class addInput(BaseModel):
 class AddTool(BaseTool):
     name: str = "add"
     description: str = "Adds two numbers."
-    args_schema: Type[BaseModel] = addInput
+    args_schema: Type[BaseModel] = AddInput
 
     def _run(self, a: int, b: int) -> int:
         """Adds two numbers."""
