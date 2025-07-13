@@ -1,0 +1,1 @@
+Tool binding -> step in which we register/bind tools with llm -> llm knows which tool it has and what operation each tool does
