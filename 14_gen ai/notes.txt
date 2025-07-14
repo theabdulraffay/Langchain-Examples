@@ -27,3 +27,41 @@ adaptive -> readjust according the changes api fails, do data etc
 Types of Ai agents 
 
 Design pattern for agents -> self ask with search 
+
+
+1. ReAct -> reasoning + acting 
+thought + action + obervation 
+observation is the output of action (tools)
+
+multi step process 
+usgae of tools 
+
+
+2. Agent and Agent Executer
+Agent executer run the loop of thought, action and obervation 
+
+AE send thought trace + user query to the agent
+agent send action and action input to AE 
+AE interacts with the tools not agent 
+
+
+agent scratchpad is the memory of the agent 
+
+3. Creating agent -> get user query and thought process to generate an action of final output -> if its an action it will again go to the agent executer
+agent = create_react_agent(
+    llm=model,
+    prompt=react_prompt,
+    tools=[tool]
+)
+
+4. agent executer ->loops, tool execution and get result 
+agent_executor = AgentExecutor(
+    agent=agent,
+    tools=[tool],
+    verbose=True,
+)
+
+
+5. Flow diagram 
+query ->agent executer -> agent get the scratchpad(thought trace) -> generate thought -> either action or final output -> if its AgentAction -> execute tool -> result (observation) which update the agent scratch pad -> again to agent and this cycle repeats 
+if its AgentFinish -> return return_values
