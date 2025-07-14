@@ -21,3 +21,9 @@ planning
 tool using awareness
 context aware 
 adaptive -> readjust according the changes api fails, do data etc 
+
+
+
+Types of Ai agents 
+
+Design pattern for agents -> self ask with search 
