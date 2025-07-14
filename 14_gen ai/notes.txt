@@ -1,0 +1,23 @@
+
+Transport 
+hotels
+cabs for travelling 
+return ticketing 
+
+step by step preferences by the user 
+gets all the booking confirmed 
+add reminders to the calender 
+send  receipt to your email
+
+
+What is Ai agent?
+sequence of action by using external tools 
+
+agent = llm (for reasoning and decision making) + tools (for performing actions)
+
+characterstics:
+goal driven
+planning 
+tool using awareness
+context aware 
+adaptive -> readjust according the changes api fails, do data etc 

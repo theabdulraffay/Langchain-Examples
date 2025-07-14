@@ -13,7 +13,7 @@ load_dotenv()
 
 @tool
 def get_conversion_factor(base_currency: str, target_currency: str) -> float:
-    """Returns the currency conversion factor from a guven base curency to a target currency."""
+    """Returns the currency conversion factor from a given base curency to a target currency."""
 
 
     api_key = os.getenv("EXCHANGE_RATE_API")
@@ -61,10 +61,6 @@ for tool_call in ai_message.tool_calls:
         tool_call['args']['conversion_rate'] = rate  # inject the conversion rate into the tool call
         tool_message = convert.invoke(tool_call)
         messages.append(tool_message)
-# print(get_conversion_factor.invoke({
-#     "base_currency": "USD",
-#     "target_currency": "PKR"
-# }))
 
 print(messages)
 result = llm_with_tools.invoke(messages)
