@@ -20,7 +20,7 @@ goal driven
 planning 
 tool using awareness
 context aware 
-adaptive -> readjust according the changes api fails, do data etc 
+adaptive -> readjust according the changes api fails, no data etc 
 
 
 

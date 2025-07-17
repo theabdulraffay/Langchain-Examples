@@ -30,3 +30,6 @@ pydantic # Data validation and settings management
 
 #To read PDFs using pyPDFLoader
 pypdf
+
+supabase
+tiktoken
