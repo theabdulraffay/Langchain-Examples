@@ -14,8 +14,6 @@ embedding = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L
 supabase_url = os.getenv("SUPABASE_URL")
 supabase_key = os.getenv("SUPABASE_SERVICE_KEY")
 
-print(supabase_key)
-print(supabase_url)
 supabase: Client = create_client(supabase_url, supabase_key)
 
 # loader = TextLoader(file_path="cricket.txt", encoding='utf-8')
@@ -40,18 +38,21 @@ supabase: Client = create_client(supabase_url, supabase_key)
 # print(docs[0])
 
 
-# vector_store = SupabaseVectorStore(
-#     embedding=embedding,
-#     client=supabase,
-#     table_name="documents",
-#     query_name="match_documents",
-# )
+vector_store = SupabaseVectorStore(
+    embedding=embedding,
+    client=supabase,
+    table_name="documents",
+    query_name="match_documents",
+)
 
-# query = "what magic does cricket hold?"
-# result = vector_store.similarity_search(query=query)
+query = "what is encoder decoder architecture"
+result = vector_store.similarity_search(query=query)
 
 # retriever = vector_store.as_retriever(search_type='mmr')
 # # another_result = retriever.invoke(query)
+for i in result:
+    print(i.page_content)
+    print()
 # print(result)
 # print(another_result)
 
